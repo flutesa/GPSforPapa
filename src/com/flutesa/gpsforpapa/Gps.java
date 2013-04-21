@@ -63,10 +63,10 @@ public class Gps extends Activity implements LocationListener {
 			g_latitude = g_lat.split(",");
 			g_longitude = g_lat.split(",");
 			
-			current_coordinates.setText(c_latitude[0] + " \n" + c_longitude[0] + " „"); //текущие координаты
-			goal_coordinates.setText(g_latitude[0] + "\n" + g_longitude[0]); //координаты цели
-			altitude.setText(String.valueOf((int)location.getAltitude()) + " м"); //текущаЯ высота над уровнем морЯ
-			accuracy.setText(String.valueOf((int)location.getAccuracy()) + " м"); //точность локации
+			current_coordinates.setText(c_latitude[0] + " В\n" + c_longitude[0] + " вЂћ"); //С‚РµРєСѓС‰РёРµ РєРѕРѕСЂРґРёРЅР°С‚С‹
+			goal_coordinates.setText(g_latitude[0] + "\n" + g_longitude[0]); //РєРѕРѕСЂРґРёРЅР°С‚С‹ С†РµР»Рё
+			altitude.setText(String.valueOf((int)location.getAltitude()) + " Рј"); //С‚РµРєСѓС‰Р°РЇ РІС‹СЃРѕС‚Р° РЅР°Рґ СѓСЂРѕРІРЅРµРј РјРѕСЂРЇ
+			accuracy.setText(String.valueOf((int)location.getAccuracy()) + " Рј"); //С‚РѕС‡РЅРѕСЃС‚СЊ Р»РѕРєР°С†РёРё
 			
 			
 			destin = new Location("destin");
@@ -76,13 +76,13 @@ public class Gps extends Activity implements LocationListener {
 			destin.setLongitude(lon);
 			dist = location.distanceTo(destin)/1e3;
 			
-			distance.setText(String.valueOf(dist) + " км"); //расстоЯние до цели
+			distance.setText(String.valueOf(dist) + " РєРј"); //СЂР°СЃСЃС‚РѕРЇРЅРёРµ РґРѕ С†РµР»Рё
 			
 			bear = location.bearingTo(destin);
-			bearing.setText(String.valueOf((int)bear) + " *"); //расстоЯние до цели
+			bearing.setText(String.valueOf((int)bear) + " *"); //СЂР°СЃСЃС‚РѕРЇРЅРёРµ РґРѕ С†РµР»Рё
 					
 		} else {
-			 current_coordinates.setText("Љоординаты не найдены!"); //Toast.makeText(this, "Coordinates is not found", Toast.LENGTH_SHORT).show();
+			 current_coordinates.setText("Р‰РѕРѕСЂРґРёРЅР°С‚С‹ РЅРµ РЅР°Р№РґРµРЅС‹!"); //Toast.makeText(this, "Coordinates is not found", Toast.LENGTH_SHORT).show();
 			   }
 		    }
 
